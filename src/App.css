@@ -1,0 +1,221 @@
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: background 0.5s ease;
+}
+
+.app.light body,
+.app.light {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: #222;
+}
+
+.app {
+  background-color: rgba(0, 0, 0, 0.65);
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem 3rem 3rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.app.light {
+  background-color: #fff9f4cc;
+  color: #222;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(1px 1px 2px black);
+  transition: filter 0.5s ease;
+}
+
+.app.light .logo {
+  filter: drop-shadow(1px 1px 2px #aaa);
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fbd38d;
+  text-shadow: 1px 1px 5px #b7791f;
+  user-select: none;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.app.light .title {
+  color: #dd6b20;
+  text-shadow: 1px 1px 3px #f6ad55;
+}
+
+.mode-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.mode-toggle:hover {
+  background-color: #f6ad55cc;
+  color: #2d3748;
+}
+
+.input {
+  width: 100%;
+  height: 140px;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  resize: none;
+  box-shadow: inset 0 0 12px #4a5568;
+  background-color: #1a202c;
+  color: #fbd38d;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+.input:focus {
+  box-shadow: 0 0 12px #fbd38d;
+  background-color: #2d3748;
+}
+
+.app.light .input {
+  background-color: #fff;
+  color: #222;
+  box-shadow: inset 0 0 12px #ddd;
+}
+
+.app.light .input:focus {
+  box-shadow: 0 0 12px #f6ad55;
+  background-color: #fef6eb;
+}
+
+.btn {
+  background: linear-gradient(45deg, #f6ad55, #dd6b20);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  box-shadow: 0 5px 15px #dd6b20cc;
+  user-select: none;
+}
+
+.btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, #dd6b20, #f6ad55);
+  box-shadow: 0 8px 20px #f6ad55cc;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  margin-top: 2.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  font-size: 1.5rem;
+  user-select: none;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.app.light .card {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.label {
+  margin: 0 0.3rem;
+  padding: 0.2rem 0.9rem;
+  border-radius: 18px;
+  font-weight: 700;
+  user-select: none;
+}
+
+.positive {
+  color: #4ade80;
+  background-color: #16653444;
+  border: 2px solid #22c55e;
+}
+
+.negative {
+  color: #f87171;
+  background-color: #991b1b44;
+  border: 2px solid #ef4444;
+}
+
+.neutral {
+  color: #fbbf24;
+  background-color: #78350f44;
+  border: 2px solid #f59e0b;
+}
+
+.error {
+color: #f87171;
+margin-top: 1rem;
+font-weight: 600;
+}
+
+.footer {
+margin-top: 3rem;
+font-size: 0.85rem;
+font-weight: 600;
+color: #d6bcfa;
+user-select: none;
+}
+
+.app.light .footer {
+color: #9c4221;
+}
