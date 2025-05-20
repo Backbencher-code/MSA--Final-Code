@@ -1,8 +1,10 @@
 # MSA--Final-Code
 First run train.py
 then run evaluate.py
+
 For front end:
 run the below command in terminal in the same folder:
+
 npx create-react-app sentiment-frontend
 cd sentiment-frontend
 
